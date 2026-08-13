@@ -53,16 +53,16 @@ const DiagramPage = () => {
             <div className={styles.diagramPage__background}>
                 <div className={styles.diagramPage__top}>
 
-                    <button className={styles.diagramPage__back} onClick={() => navigate("/dashboard")}><img src="/arrow.png" alt="" />Повернутись на головну</button>
+                    <button className={styles.diagramPage__back} onClick={() => navigate("/dashboard")}><img src= {`${import.meta.env.BASE_URL} arrow.png" alt=""`} />Повернутись на головну</button>
 
                     <Balance showDiagramLink={false} balance={currentBalance} setBalance={setStartBalance} showHint={false} compact={true} />
                
                     <div className={styles.diagramPage__period}>
                         <p className={styles.diagramPage__periodTitle}>Поточний період</p>
                         <div>
-                            <button className={styles.diagramPage__periodButton}><img src="/arrowleft.png" alt="" /></button>  
+                            <button className={styles.diagramPage__periodButton}><img src={`${import.meta.env.BASE_URL}arrowleft.png alt=""`} /></button>  
                             <span className={styles.diagramPage__periodDate}>{currentMonth}</span>
-                            <button className={styles.diagramPage__periodButton}><img src="/arrowright.png" alt="" /></button>
+                        <button className={styles.diagramPage__periodButton}><img src={`${import.meta.env.BASE_URL}arrowright.png alt=""`} /></button>
                         </div>
                     </div>
                 </div>   

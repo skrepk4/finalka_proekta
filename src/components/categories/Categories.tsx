@@ -50,9 +50,9 @@ const Categories = ({ transactions, type, setType, selectedCategory, setSelected
     return(
         <div className={styles.categories}>
             <div className={styles.categories__header}>
-                <button className={styles.categories__arrow} onClick={() => setType("expense")} disabled={type === "expense"}><img src="./arrowleft.png" alt="" /></button>
+                <button className={styles.categories__arrow} onClick={() => setType("expense")} disabled={type === "expense"}><img src={`${import.meta.env.BASE_URL}arrowleft.png alt=""`} /></button>
                 <h2 className={styles.categories__title}>{type === "expense" ? "витрати" : "дохiд"} </h2>
-                <button className={styles.categories__arrow} onClick={() => setType("income")} disabled={type === "income"}><img src="./arrowright.png" alt="" /></button>
+                <button className={styles.categories__arrow} onClick={() => setType("income")} disabled={type === "income"}><img src={`${import.meta.env.BASE_URL}arrowright.png alt=""`} /></button>
             </div>
             <div className={`${styles.categories__grid} ${type === "income" ? styles.categories__gridIncome : ""}`}>
                 {categories.map((item) => (

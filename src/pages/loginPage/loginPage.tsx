@@ -48,7 +48,7 @@ const LoginPage = () => {
 
                 <div className={styles.login__card}>
                     <p className={styles.login__text}>Ви можете авторизуватися за допомогою акаунта Google</p>
-                    <button className={styles.login__google}> <img src="/Group.png" alt=""/> Google</button>
+                    <button className={styles.login__google}> <img src={`${import.meta.env.BASE_URL}Group.png alt=""`}/> Google</button>
                     <p className={styles.login__text}>Або увійти за допомогою ел. пошти та праолю після реєстрації</p>
 
                     <form className={styles.login__form} onSubmit={handleSubmit}>
