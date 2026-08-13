@@ -6,7 +6,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <GoogleOAuthProvider clientId="636388591404-rrfkk7j9t82qqa0t102qbjt6kkd16j09.apps.googleusercontent.com">
-      <BrowserRouter>
+      <BrowserRouter basename="/finalka_proekta">
       <App />
       </BrowserRouter>
   </GoogleOAuthProvider>
