@@ -63,7 +63,7 @@ const Diagram = ({transactions, type, selectedCategory}: Props) => {
                                     <Cell key={index} fill={colors[index % colors.length]}/>
                                 ))}
 
-                                <LabelList dataKey="amount" position="right" fill="#52555F" formatter={(value: number) => `${Number(value).toFixed(0)} грн`}/>
+                                <LabelList dataKey="amount" position="right" fill="#52555F" formatter={(value) => `${Number(value).toFixed(0)} грн`}/>
                             </Bar>
                         </BarChart>
                     ) : (
@@ -76,7 +76,7 @@ const Diagram = ({transactions, type, selectedCategory}: Props) => {
                                 {diagData.map((_, index) => (
                                     <Cell key={index} fill={colors[index % colors.length]}/>
                                 ))}
-                                <LabelList dataKey="amount" position="top" fill="#52555F" formatter={(value: number) => `${Number(value).toFixed(0)} грн`}/>
+                                <LabelList dataKey="amount" position="top" fill="#52555F" formatter={(value) => `${Number(value).toFixed(0)} грн`}/>
                             </Bar>
                         </BarChart>
                         )}

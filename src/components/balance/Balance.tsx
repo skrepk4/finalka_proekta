@@ -1,6 +1,6 @@
 import type React from "react";
 import styles from "./balance.module.scss"
-import { startTransition, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { saveBalance } from "../../services/balance";
 import { Link } from "react-router-dom";
 import BalanceHint from "../Hint/BalanceHint";

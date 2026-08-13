@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react"
 import Balance from "../../components/balance/Balance"
 import Header from "../../components/header/header"
-import Summary from "../../components/summary/Summary"
 import TransactionForm from "../../components/transactionForm/TransactionForm"
-import BalanceHint from "../../components/Hint/BalanceHint"
 import styles from "./dashboardPage.module.scss"
 import type { Transaction } from "../../types/transaction"
 import { getBalance } from "../../services/balance"
 import { saveTransaction, getTransactions, deleteTransactionFromDB, clearTransactionsFromDB } from "../../services/transactions"
-import Diagram from "../../components/diagram/Diagram"
 const dashboardPage = () => {
     const [transactions, setTransactions] = useState<Transaction[]>([])
     const [startBalance, setStartBalance] = useState(0)
