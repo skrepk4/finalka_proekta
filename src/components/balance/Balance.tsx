@@ -56,7 +56,7 @@ const Balance = ({balance, setBalance, showDiagramLink= true, showHint = true, c
             {showDiagramLink && (
                 <Link to="/diagram" className={styles.balance__link}>
                     <span className={styles.balance__text}>Перейти до розрахунків</span>
-                    <img className={styles.balance__icon} src={`${import.meta.env.BASE_URL} barChart.png alt="Статистика"`} />
+                    <img className={styles.balance__icon} src={`${import.meta.env.BASE_URL} barChart.png`} />
             </Link>
             )}
 

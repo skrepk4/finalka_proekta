@@ -39,7 +39,7 @@ const TransactionTable = ({ transactions, deleteTransaction }: Props) => {
                             {item.type === "income" ? `+ ${item.amount} грн.` : `- ${item.amount} грн.`}
                         </div>
                         <button className={styles.table__delete} onClick={() => deleteTransaction(item.id!)}>
-                            <img src={`${import.meta.env.BASE_URL}TrashIcon.png`} alt="" />
+                            <img src={`${import.meta.env.BASE_URL}TrashIcon.png`} />
                         </button>
 
                     </div>
