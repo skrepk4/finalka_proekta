@@ -1,0 +1,20 @@
+
+.logo{
+    position: relative;
+    display: flex; 
+    align-items: center;
+    width: 116px;
+}
+.text{
+    position: absolute;
+    font-family: Roboto;
+    font-weight: 800;
+    font-style: ExtraBold;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+    text-transform: uppercase;
+    top: 40%;
+    left: 20px;
+    z-index: 1;
+}

@@ -1,0 +1,201 @@
+.categories{
+    width: 100%;
+    max-width: 1150px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 10px 60px 0px #AAB2C533;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 25px 40px 35px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    height: 358px;
+    &__header{
+        width: 134px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding-bottom: 20px;
+        margin: 0 auto;
+    }
+    &__title{
+        margin: 0;
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 2%;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        color: #000000;
+        
+    }
+    &__arrow{
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    &__grid{
+        margin: 0 auto;
+        width: 650px;
+        height: 268px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        row-gap: 35px;
+        column-gap: 20px;
+    } 
+    &__gridIncome{
+        grid-template-columns: repeat(2, 100px);
+        justify-content: center;
+        gap: 20px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        &:hover{
+            .categories__iconBox{
+                background-color: #FFDAC0;
+                transition: .2s;
+            }
+            .categories__icon{
+                filter: brightness(0) saturate(100%)
+                    invert(51%)
+                    sepia(97%)
+                    saturate(2800%)
+                    hue-rotate(359deg)
+                    brightness(101%)
+                    contrast(102%);
+                transition: .2s;
+            }
+        }
+    }
+    &__itemSelected{
+        .categories__iconBox{
+            background-color: #FFDAC0;
+        }
+        .categories__icon{
+            filter: brightness(0) saturate(100%)
+            invert(51%)
+            sepia(97%)
+            saturate(2800%)
+            hue-rotate(359deg)
+            brightness(101%)
+            contrast(102%);
+        }
+    }
+    &__amount{
+        margin: 0 0 8px;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 4%;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        color: #52555F;
+        margin-bottom: 15px;
+    }
+    &__iconBox{
+        width: 59px;
+        height: 46px;
+        border-radius: 20px;
+        background-color: #F5F6FB;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    &__icon{
+        width: 55px;
+        height: 60px;
+        object-fit: contain;
+        filter: brightness(0) saturate(100%) invert(10%) sepia(31%) saturate(1800%) hue-rotate(178deg) brightness(88%) contrast(105%);
+        cursor: pointer;
+    }
+    &__name{
+        margin-top: 10px;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 2%;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        color: #52555F;
+    }
+}
+@media screen and (max-width: 1160px) {
+    .categories {
+        width: calc(100% - 60px);
+        max-width: 1060px;
+        box-sizing: border-box;
+        padding: 25px 30px 35px;
+        height: auto;
+        min-height: 358px;
+    }
+
+    .categories__grid {
+        width: 650px;
+        max-width: 100%;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 10px;
+        row-gap: 30px;
+    }
+
+    .categories__gridIncome {
+        grid-template-columns: repeat(2, 100px);
+    }
+}
+@media screen and (max-width: 750px) {
+    .categories {
+        width: calc(100% - 30px);
+        padding: 20px 15px 25px;
+        height: auto;
+        margin-bottom: 20px;
+        border-radius: 20px;
+
+        &__header {
+            padding-bottom: 15px;
+        }
+
+        &__grid {
+            width: 100%;
+            height: auto;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 5px;
+            row-gap: 25px;
+        }
+
+        &__gridIncome {
+            grid-template-columns: repeat(2, 100px);
+            justify-content: center;
+            gap: 15px;
+        }
+
+        &__amount {
+            font-size: 9px;
+            margin-bottom: 8px;
+        }
+
+        &__iconBox {
+            width: 55px;
+            height: 45px;
+            border-radius: 15px;
+        }
+
+        &__icon {
+            width: 52px;
+            height: 55px;
+        }
+
+        &__name {
+            font-size: 9px;
+            margin-top: 8px;
+        }
+    }
+}

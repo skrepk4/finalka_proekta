@@ -1,0 +1,159 @@
+.diagramPage{
+    &__top{
+        width: calc(100% - 60px);
+        max-width: 1150px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        padding-top: 40px;
+        margin: 0 auto;
+    }
+    &__background{
+        max-height: 583px;
+        height: auto;
+        background-color: #F2F5FC;
+        border-bottom-left-radius: 200px;
+        padding-bottom: 60px;
+        box-sizing: border-box;
+    }
+    &__back{
+        background-color: transparent;
+        border: none;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 4%;
+        color: #52555FB2;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        justify-self: start;
+    }
+    &__period{
+        height: 50px;
+        justify-self: end;
+    }
+    &__periodButton{
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #FF751D;
+        font-size: 20px;
+    }
+    &__periodDate{
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 2%;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        color: #000000;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    &__periodTitle{
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 4%;
+        text-align: center;
+        color: #52555FB2;
+    }
+}
+@media screen and (max-width: 1160px) {
+    .diagramPage {
+
+        &__top {
+            width: calc(100% - 60px);
+        }
+
+        &__background {
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 750px) {
+    .diagramPage{
+        max-height: 268px;
+        padding-bottom: 30px;
+        border-bottom-left-radius: 80px;
+        &__top{
+            width: calc(100% - 30px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            padding-top: 20px;
+        }
+        &__back{
+            align-self: center;
+            order: -1;
+        }
+        &__period{
+            order: -1;
+            height: auto;
+
+        }
+        &__periodTitle{
+            font-size: 9px;
+        }
+        &__periodDate{
+            font-size: 12px;
+            margin: 0 10px;
+
+        }
+        &__periodButton img{
+            width: 8px;
+        }
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .diagramPage{
+        height: auto;
+        padding-bottom: 30px;
+        border-bottom-left-radius: 80px;
+        &__top{
+            width: calc(100% - 30px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding-top: 20px;
+        }
+        &__back{
+            width: 24px;
+            justify-self: auto;
+            align-self: flex-start;
+            font-size: 1px;
+            color: transparent;
+        }
+        &__period{
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-self: auto;
+            order: 1;
+        }
+        &__periodTitle {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        &__periodDate{
+            font-size: 13px;
+            margin: 0 12px;
+        }
+        &__periodButton{
+            font-size: 16px;
+        }
+    }
+}

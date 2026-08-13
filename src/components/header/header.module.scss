@@ -1,0 +1,62 @@
+.header{
+    height: 60px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    &__user{
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 4%;
+        text-align: right;
+        color: #52555F;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+    &__avatar{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #F5F6FA;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    &__name{
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 4%;
+        text-align: right;
+        color: #52555F;
+    }
+    &__logout{
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 4%;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 0%;
+        color: #52555F;
+        text-decoration: underline;
+    }
+}
+@media screen and (max-width: 320px) {
+    .header{
+        &__name{
+            display: none;
+        }
+    }
+    
+}

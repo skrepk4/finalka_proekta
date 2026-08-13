@@ -1,0 +1,236 @@
+.table{
+    width: 100%;
+    max-width: 760px;
+    &__header{
+        height: 40px;
+        padding: 0 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 2fr 1.5fr 1fr 50px;
+        align-items: center;
+        background-color: #F5F6FB;
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 2%;
+        vertical-align: middle;
+        text-transform: uppercase;
+    }
+    &__body{
+        max-width: 760px;
+        width: 100%;
+    }
+    &__row{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1.5fr 1fr 50px;
+        align-items: center;
+        padding: 0 20px;
+        min-height: 52px;
+        border: 2px solid #F5F6FB;
+    }
+    &__income{
+        color: green;
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 4%;
+        text-align: right;
+        vertical-align: middle;
+        justify-self: end;
+        padding-right: 10px;
+    }
+    &__expense{
+        color: red;
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 4%;
+        text-align: left;
+        vertical-align: middle;
+        padding-right: 10px;
+    }
+    &__cell{
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 100%;
+        letter-spacing: 4%;
+        vertical-align: middle;
+        color: #52555F;
+        display: flex;
+        align-items: center;
+    }
+    &__delete{
+        width: 32px;
+        height: 32px;
+        border-radius: 20px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: .2s;
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
+        &:hover{
+            background-color: #F5F6FB;
+        }
+    }
+    &__empty{
+        height: 52px;
+        border:2px solid #F5F6FB;
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 4%;
+        vertical-align: middle;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+    }
+    &__rowEmpty{
+        height: 52px;
+        border: 2px solid #F5F6FB;
+    }
+    &__body{
+        height: 420px;
+        overflow-y: auto;
+    }
+}
+    .table__body::-webkit-scrollbar {
+        width: 6px;
+    }
+    .table__body::-webkit-scrollbar-thumb{
+            background-color: #FF751D;
+            border-radius: 20px;
+    }
+    .table__body::-webkit-scrollbar-track{
+            background-color: #F2F5FC;
+    }
+@media screen and (max-width: 600px) {
+    .table{
+        width: 100%;
+        height: 100%;
+        &__header{
+            width: 100%;
+            height: 40px;
+            padding: 0 8px;
+            grid-template-columns: 75px 1fr 85px 65px 30px;
+            font-size: 10px;
+            box-sizing: border-box;
+        }
+        &__body{
+            width: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: 250px;
+        }
+        &__row{
+            width: 100%;
+            min-height: 65px;
+            padding: 0 8px;
+            grid-template-columns: 75px 1fr 85px 65px 30px;
+            box-sizing: border-box;
+        }
+        &__cell{
+           min-width: 0;
+           font-size: 10px;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+        }
+        &__income, &__expense{
+            font-size: 10px;
+            padding-right: 0;
+            white-space: normal ;
+            line-height: 110%;
+        }
+        &__delete{
+            width: 25px;
+            height: 25px;
+        }
+        &__empty{
+            font-size: 12px;
+        }
+    }
+@media screen and (max-width: 462px) {
+    .table {
+        width: 100%;
+
+        &__date {
+            display: none;
+        }
+
+        &__header {
+            grid-template-columns: minmax(0, 1fr) 70px 60px 24px;
+            padding: 0 8px;
+            font-size: 9px;
+            column-gap: 4px;
+        }
+
+        &__row {
+            grid-template-columns: minmax(0, 1fr) 70px 60px 24px;
+            padding: 10px 6px;
+            column-gap: 4px;
+            min-height: 75px;
+        }
+
+        &__cell {
+            min-width: 0;
+            width: 100%;
+            font-size: 9px;
+            line-height: 120%;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        &__income,
+        &__expense {
+            min-width: 0;
+            width: 60px;
+            padding: 0;
+            font-size: 9px;
+            line-height: 110%;
+            text-align: left;
+            overflow-wrap: anywhere;
+        }
+
+        &__delete {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+@media screen and (max-width: 350px) {
+    .table {
+        &__header {
+            grid-template-columns: minmax(0, 1fr) 60px 55px 22px;
+        }
+
+        &__row {
+            grid-template-columns: minmax(0, 1fr) 60px 55px 22px;
+        }
+
+        &__income,
+        &__expense {
+            width: 55px;
+            font-size: 8px;
+        }
+
+        &__cell {
+            font-size: 8px;
+        }
+
+        &__delete {
+            width: 22px;
+            height: 22px;
+        }
+    }
+}
+}
