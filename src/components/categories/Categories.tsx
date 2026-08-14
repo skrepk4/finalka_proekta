@@ -11,17 +11,17 @@ interface Props {
     setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>
 }
 const expenseIcons: Record<string, string> = {
-    "Продукти": "/categories/продукти.png",
-    "Алкоголь": "/categories/алкоголь.png",
-    "Розваги": "/categories/розваги.png",
-    "Здоров'я": "/categories/здоров'я.png",
-    "Транспорт": "/categories/транспорт.png",
-    "Все для дому": "/categories/все для дому.png",
-    "Техніка": "/categories/техніка.png",
-    "Комуналка, зв'язок": "/categories/комуналка.png",
-    "Спорт, хобі": "/categories/спорт.png",
-    "Навчання": "/categories/навчання.png",
-    "Інше": "/categories/інше.png",
+  "Продукти": `${import.meta.env.BASE_URL}categories/продукти.png`,
+  "Алкоголь": `${import.meta.env.BASE_URL}categories/алкоголь.png`,
+  "Розваги": `${import.meta.env.BASE_URL}categories/розваги.png`,
+  "Здоров'я": `${import.meta.env.BASE_URL}categories/здоров'я.png`,
+  "Транспорт": `${import.meta.env.BASE_URL}categories/транспорт.png`,
+  "Все для дому": `${import.meta.env.BASE_URL}categories/все для дому.png`,
+  "Техніка": `${import.meta.env.BASE_URL}categories/техніка.png`,
+  "Комуналка, зв'язок": `${import.meta.env.BASE_URL}categories/комуналка.png`,
+  "Спорт, хобі": `${import.meta.env.BASE_URL}categories/спорт.png`,
+  "Навчання": `${import.meta.env.BASE_URL}categories/навчання.png`,
+  "Інше": `${import.meta.env.BASE_URL}categories/інше.png`,
 };
 
 const incomeIcons: Record<string, string> = {
