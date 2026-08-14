@@ -52,7 +52,7 @@ const RegisterPage = () => {
                 </div>
                  <div className={styles.register__card}>
                     <p className={styles.register__text}>Ви можете авторизуватися за допомогою акаунта Google</p>
-                    <button type="button" className={styles.register__google}><img src={`${import.meta.env.BASE_URL}Group.png"`}/>Google</button>
+                    <button type="button" className={styles.register__google}><img src={`${import.meta.env.BASE_URL}Group.png`} />Google</button>
                     <p className={styles.register__text}>Або увійти за допомогою ел. пошти та паролю після реєстрації</p>
                     <form className={styles.register__form} onSubmit={handleSubmit}>
                         <label className={styles.register__label}>Ім'я</label>
