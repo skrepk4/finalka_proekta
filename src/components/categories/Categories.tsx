@@ -24,11 +24,6 @@ const expenseIcons: Record<string, string> = {
   "Інше": `${import.meta.env.BASE_URL}categories/інше.png`,
 };
 
-const incomeIcons: Record<string, string> = {
-    "ЗП": `${import.meta.env.BASE_URL}categories/зп.png`,
-    "Дод. прибуток": `${import.meta.env.BASE_URL}categories/дод-прибуток.png`,
-};
-
 const Categories = ({ transactions, type, setType, selectedCategory, setSelectedCategory }: Props) => {
     
     const getIcon = (category: string) => {
