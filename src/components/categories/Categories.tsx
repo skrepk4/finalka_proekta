@@ -25,13 +25,30 @@ const expenseIcons: Record<string, string> = {
 };
 
 const incomeIcons: Record<string, string> = {
-    "ЗП": "/categories/зп.png",
-    "Дод. прибуток": "/categories/дод-прибуток.png",
+    "ЗП": `${import.meta.env.BASE_URL}categories/зп.png`,
+    "Дод. прибуток": `${import.meta.env.BASE_URL}categories/дод-прибуток.png`,
 };
 
 const Categories = ({ transactions, type, setType, selectedCategory, setSelectedCategory }: Props) => {
     
-    const icons = type === "expense" ? expenseIcons : incomeIcons
+    const getIcon = (category: string) => {
+    if (type === "expense") {
+        return expenseIcons[category]
+    }
+
+    if (category === "ЗП" || category === "Зарплата") {
+        return `${import.meta.env.BASE_URL}categories/зп.png`
+    }
+
+    if (
+        category === "Дод. прибуток" ||
+        category === "Додатковий прибуток"
+    ) {
+        return `${import.meta.env.BASE_URL}categories/дод-прибуток.png`
+    }
+
+    return ""
+}
 
     const categories = useMemo(() => {
         const result: Record<string, number> = {};
@@ -64,7 +81,7 @@ const Categories = ({ transactions, type, setType, selectedCategory, setSelected
 
                         <p className={styles.categories__amount}>{item.amount.toFixed(2)}</p>
                         <div className={styles.categories__iconBox}>
-                            <img className={styles.categories__icon} src={icons[item.category]} alt={item.category} />
+                            <img className={styles.categories__icon} src={getIcon(item.category)} alt={item.category} />
                         </div>
                         
                         <p className={styles.categories__name}>{item.category}</p>
